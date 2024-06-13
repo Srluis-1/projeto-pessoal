@@ -1,10 +1,14 @@
 body {
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#3f87a6 10%, #ebf8e1a2 10%),
+    linear-gradient(to right, #ebf8e100 10%, #c73030 10% 10.2%, #ebf8e100 10.5%);
+    background-size: 100% 25px, 100% 100%;
+    background-repeat: repeat, no-repeat;
 }
 
 .cabecalho {
     align-items: center;
-    background-color: #1f1e1e;
     display: flex;
     justify-content: space-between;
 }
@@ -13,7 +17,6 @@ body {
     margin: 10px;
     display: flex;
     align-items: center;
-
     color: #1f1e1e;
     font-size: 50px;
     gap: 10px;
@@ -45,11 +48,10 @@ body {
     font-weight: 700;
 }
 
-.passa-imagens{
+.passa-imagens {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333333;
     padding: 20px;
 }
 
@@ -66,30 +68,35 @@ body {
     justify-content: center;
     height: 150px;
     width: 100%;
-    background-color: aqua;
     text-transform: uppercase;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
 }
 
-
-.receitas .carnes{
-    height: 100%;
+.receitas {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 200px;
-    background-color: #242222;
-   
+    gap: 40px;
 }
 
-.lista-receitas {
+.receitas .carnes,
+.receitas .massas {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.lista-receitas,
+.lista-receitas-massa {
     width: 400px;
     height: 550px;
     position: relative;
 }
 
-.btn-seta {
+.btn-seta,
+.btn-seta1 {
     border: 0;
     margin: 30px;
     width: 70px;
@@ -105,14 +112,16 @@ body {
     margin-top: -200px;
 }
 
-.btn-seta.btn-voltar {
+.btn-seta.btn-voltar,
+.btn-seta.btn-voltar1 {
     margin-right: -10px;
     transform: rotateY(180deg);
 }
 
-.cartao {
+.cartao,
+.cartao-massas {
     opacity: 0;
-    height: 120%;
+    height: 110%;
     position: absolute;
     padding: 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -121,24 +130,27 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(../imagem/imagem-fundo.avif);
+    background-color: #1f1e1e;
     margin-top: -150px;
-    
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),-15px -15px 30px rgb(60, 60, 60);
 }
 
-.cartao.selecionado {
+.cartao.selecionado,
+.selecionado-massas {
     opacity: 1;
     z-index: 1;
 }
 
-.cartao .imagem-receita {
+.cartao .imagem-receita,
+.cartao-massas .imagem-receita {
     width: 100%;
-    height: 370px;
+    height: 62%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.cartao .nome-receita {
+.cartao .nome-receita,
+.cartao-massas .nome-receita {
     background-color: rgba(88, 87, 90, 0.7);
     padding: 8px 10px;
     border-top-left-radius: 10px;
@@ -149,76 +161,25 @@ body {
     letter-spacing: 5px;
 }
 
-.cartao .como-fazer {
+.cartao .como-fazer,
+.cartao-massas .como-fazer {
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.cartao .como-fazer .ingredientes {
+.cartao .como-fazer .ingredientes,
+.cartao-massas .como-fazer .ingredientes {
     background-color: #333333;
     font-size: 20px;
     color: #ffffff;
     padding: 10px;
 }
 
-.cartao .como-fazer .texto {
+.cartao .como-fazer .texto,
+.cartao-massas .como-fazer .texto {
     font-size: 14px;
     padding: 12px;
     max-height: 150px;
     overflow-y: auto;
-}
-/*----------massaa----------*/
-.lista-receitas-massa {
-    width: 400px;
-    height: 550px;
-    position: relative;
-}
-.selecionado-massas{
-    opacity: 1;
-    z-index: 1;
-
-}
-
-.cartao-massas{
-    opacity: 0;
-    height: 120%;
-    position: absolute;
-    padding: 12px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url(../imagem/frios.jpg); 
-    margin-top: -150px;
-}
-
-
-
-/*---------------------------doces------------------------*/
-
-.receitas .doces{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 200px;
-    background-color: #242222;
-}
-
-.cartao-doce {
-    opacity: 0;
-    height: 120%;
-    position: absolute;
-    padding: 12px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    margin-top: -150px;
 }
