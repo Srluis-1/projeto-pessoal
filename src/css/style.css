@@ -1,13 +1,11 @@
 body {
     width: 100%;
     height: 100%;
-    background: linear-gradient(#3f87a6 10%, #ebf8e1a2 10%),
-    linear-gradient(to right, #ebf8e100 10%, #c73030 10% 10.2%, #ebf8e100 10.5%);
-    background-size: 100% 25px, 100% 100%;
-    background-repeat: repeat, no-repeat;
+    background-color: #d3d0d0;
 }
 
 .cabecalho {
+    padding-top: 50px;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -30,35 +28,29 @@ body {
     margin-left: 60px;
 }
 
-.cabecalho .catalogo-receitas {
+/* .cabecalho .catalogo-receitas {
     display: flex;
     margin: 50px;
     gap: 40px;
 }
 
 .cabecalho .catalogo-receitas li {
-    background: #ffffff;
+    background: #cbdfe4;
     width: 250px;
-    height: 38px;
-    padding-top: 8px;
+    height: 50px;
+    padding-top: 13px;
     text-align: center;
     border-radius: 50px;
     font-size: 18px;
     text-transform: capitalize;
     font-weight: 700;
-}
-
-.passa-imagens {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
+} */
 
 .secoes {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.95;
 }
 
 .secoes h2 {
@@ -66,14 +58,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
-    width: 100%;
     text-transform: uppercase;
     font-weight: 700;
     color: #000000;
+    padding: 10px 50px;
+    height: 150px;
+    width: 70%;
+    border-radius: 20px;
+    background-color: #b1adad;
 }
 
-.receitas {
+.receitas,
+.receitas-doce,
+.receitas-pudin{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +78,9 @@ body {
 }
 
 .receitas .carnes,
-.receitas .massas {
+.receitas .massas,
+.receitas-doce .doces,
+.receitas-doce .pudin{
     height: 100%;
     display: flex;
     align-items: center;
@@ -89,7 +88,9 @@ body {
 }
 
 .lista-receitas,
-.lista-receitas-massa {
+.lista-receitas-massa,
+.lista-receitas-doce,
+.lista-receitas-pudin{
     width: 400px;
     height: 550px;
     position: relative;
@@ -119,7 +120,9 @@ body {
 }
 
 .cartao,
-.cartao-massas {
+.cartao-massas,
+.cartao-doce,
+.cartao-pudin{
     opacity: 0;
     height: 110%;
     position: absolute;
@@ -136,13 +139,17 @@ body {
 }
 
 .cartao.selecionado,
-.selecionado-massas {
+.selecionado-massas,
+.selecionado-doces,
+.selecionado-pudin{
     opacity: 1;
     z-index: 1;
 }
 
 .cartao .imagem-receita,
-.cartao-massas .imagem-receita {
+.cartao-massas .imagem-receita,
+.cartao-doce .imagem-receita,
+.cartao-pudin .imagem-receita {
     width: 100%;
     height: 62%;
     border-bottom-left-radius: 10px;
@@ -150,7 +157,9 @@ body {
 }
 
 .cartao .nome-receita,
-.cartao-massas .nome-receita {
+.cartao-massas .nome-receita,
+.cartao-doce .nome-receita,
+.cartao-pudin .nome-receita {
     background-color: rgba(88, 87, 90, 0.7);
     padding: 8px 10px;
     border-top-left-radius: 10px;
@@ -162,14 +171,18 @@ body {
 }
 
 .cartao .como-fazer,
-.cartao-massas .como-fazer {
+.cartao-massas .como-fazer,
+.cartao-doce .como-fazer,
+.cartao-pudin .como-fazer {
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .cartao .como-fazer .ingredientes,
-.cartao-massas .como-fazer .ingredientes {
+.cartao-massas .como-fazer .ingredientes,
+.cartao-doce .como-fazer .ingredientes,
+.cartao-pudin .como-fazer .ingredientes {
     background-color: #333333;
     font-size: 20px;
     color: #ffffff;
@@ -177,9 +190,14 @@ body {
 }
 
 .cartao .como-fazer .texto,
-.cartao-massas .como-fazer .texto {
+.cartao-massas .como-fazer .texto,
+.cartao-doce .como-fazer .texto,
+.cartao-pudin .como-fazer .texto {
     font-size: 14px;
     padding: 12px;
     max-height: 150px;
     overflow-y: auto;
 }
+
+
+
