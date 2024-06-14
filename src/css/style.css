@@ -195,7 +195,7 @@ body {
 .cartao-pudin .como-fazer .texto {
     font-size: 14px;
     padding: 12px;
-    max-height: 150px;
+    max-height: 100px;
     overflow-y: auto;
 }
 
